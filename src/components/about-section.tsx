@@ -60,12 +60,16 @@ export default function AboutSection() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="NGO team members collaborating on community development projects" 
+              src="/attached_assets/about_us_mamta.jpg" 
+              alt="Mamta Sharma, Founder of Navyaan Foundation" 
               className="rounded-xl shadow-lg"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl flex flex-col text-center justify-end p-6">
+              <h4 className="text-white font-['Poppins'] font-bold text-2xl">Mamta Sharma</h4>
+              <p className="text-white/90 font-['Poppins']">Founder - Navyaan Foundation</p>
+            </div>
           </div>
         </div>
         

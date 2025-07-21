@@ -13,10 +13,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "outDir": "dist", // ✅ Only compiled files go to dist/
+    "rootDir": "src", // ✅ All your ts/tsx should be in src
+    "noEmit": true, // ✅ Prevent emitting .js when developing
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["dist", "node_modules"]
 }
