@@ -1,5 +1,6 @@
 {
   "name": "modernwebsite",
+  "homepage": "https://navyaanfoundation.github.io/portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -79,6 +82,7 @@
     "@types/react-dom": "^18.x",
     "@vitejs/plugin-react": "^4.x",
     "autoprefixer": "^10.x",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.x",
     "tailwindcss": "^3.x",
     "tailwindcss-animate": "^1.0.7",
