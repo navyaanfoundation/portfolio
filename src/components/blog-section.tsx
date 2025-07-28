@@ -4,26 +4,32 @@ import { Calendar } from "lucide-react";
 export default function BlogSection() {
   const blogPosts = [
     {
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
       date: "December 15, 2024",
-      title: "New Digital Learning Center Opens in Jaipur",
-      description: "Our latest digital learning center in rural Jaipur is now operational, providing computer literacy and digital skills training to 200+ local students.",
-      alt: "Students learning computer skills in new digital center"
+      title: "National Environment Conclave 2025: Inspiring Change in Jaipur",
+      description:
+        "Our team played a key role in organizing the 5-day National Environment Conclave at RFWTI, Jaipur, in partnership with CCoNREPCC and the Rajasthan Pollution Control Board. Highlights included Youth Parliament, Innovation to Industry sessions, cultural events, and a grand cyclothon. Grateful for the guidance of Smt. Shailaja Deval, IFS.",
+      alt: "Students learning computer skills in new digital center",
     },
     {
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+      image:
+        "https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
       date: "December 10, 2024",
-      title: "Free Health Camp Serves 500+ Villagers",
-      description: "Our mobile health clinic completed a successful three-day camp in remote villages, providing free medical consultations and health education.",
-      alt: "Medical professionals conducting health screening at village camp"
+      title: "Honored to Moderate Young Indian Parliament, Jaipur",
+      description:
+        "Served as Moderator and Jury at the Young Indian Parliament (City Round) organized by CII at Hotel Royal Orchid. Ten students are now selected for the next rounds at Kanpur and Delhi. A truly inspiring experience with young leaders!",
+      alt: "Medical professionals conducting health screening at village camp",
     },
     {
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
+      image:
+        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
       date: "December 5, 2024",
-      title: "Community Plants 1,000 Trees in One Day",
-      description: "Our Green Communities initiative achieved a milestone with local volunteers planting 1,000 native trees in degraded forest areas.",
-      alt: "Community tree plantation event with volunteers and local residents"
-    }
+      title: "Shiv Mahabhishek, Divine Bath & Rudraksh Distribution",
+      description:
+        "Sh. Avinash Gehlot, Cabinet Minister of Social Justice & Empowerment (Rajasthan), led the sacred Shiv Mahabhishek ceremony and distributed rudraksh to devotees, creating a spiritual and memorable event.",
+      alt: "Community tree plantation event with volunteers and local residents",
+    },
   ];
 
   return (
