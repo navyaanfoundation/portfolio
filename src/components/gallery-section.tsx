@@ -7,24 +7,49 @@ export default function GallerySection() {
   const [showAllImages, setShowAllImages] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const galleryImages = [
-    "/attached_assets/gallery_img/1.jpeg",
-    "/attached_assets/gallery_img/2.jpg",
-    "/attached_assets/gallery_img/3.jpg",
-    "/attached_assets/gallery_img/4.jpg",
-    "/attached_assets/gallery_img/5.jpeg",
-    "/attached_assets/gallery_img/6.jpeg",
-    "/attached_assets/gallery_img/7.JPG",
-    "/attached_assets/gallery_img/8.jpg",
-    "/attached_assets/gallery_img/9.jpg",
-    "/attached_assets/gallery_img/10.jpg",
-    "/attached_assets/gallery_img/11.jpg",
-    "/attached_assets/gallery_img/12.jpeg",
-    "/attached_assets/gallery_img/13.jpeg",
-    "/attached_assets/gallery_img/14.jpeg",
-    "/attached_assets/gallery_img/15.jpeg",
-    "/attached_assets/gallery_img/16.jpg",
+  const ids = [
+    "1CkYCumhJBvcIC75DjzM6pYB8TK2E9Tjo",
+    "1ThG2wFuDnVWXYEDGOBn4Qgi-ibi1gCRu",
+    "1kGJxkAlFFFE8ZhBBj083Do9l_6g8er5-",
+    "1YEQIdJJLMajAb2Iok7I4Bac9-GJSu4Q6",
+    "1ZY3NqeMhPHx0JY8NGYI7mA-Zu2HqQwPm",
+    "11MK-CwYYSHBu-Lor9VXU16z0APCTo1IP",
+    "134uOu72JFwKZNv4Rg5OZl2Q3mkOJEEh3",
+    "11j5oehPEGqMgFpzylPS-7EanjNre-UAx",
+    // 2nd eight images
+    "1oXhy2jKla85zoAArTf_5fJh6LJoqwySp",
+    "1FayO8GGdAhrwlHICAJQ_hQrkUOMTfl6r",
+    "1bVw6VfMbNTVceX1UHQDZuV-osPtshYB0",
+    "1-xBEZEIFxvZokgvh9gTjQPzcPlF-bzsN",
+    "1jRQ79-vJu71SKvFCkQcAhjJqU1SOYf3n",
+    "1SugvF5w1y1tz_7qNHQiRjK5qeRD0AwLo",
+    "1Hv5BSjVNjK_sIfRZbclUrf6Z77qWbWYy",
+    "1ci7SixUhBT7WurNsga4Njt2XyTDvcA1l",
   ];
+  // const galleryImages = [
+  //   "https://drive.google.com/thumbnail?id=1CkYCumhJBvcIC75DjzM6pYB8TK2E9Tjo&sz=w1000",
+  //   "https://drive.google.com/thumbnail?id=1ThG2wFuDnVWXYEDGOBn4Qgi-ibi1gCRu&sz=w1000",
+  //   "https://drive.google.com/thumbnail?id=1kGJxkAlFFFE8ZhBBj083Do9l_6g8er5-&sz=w1000",
+  //   "/attached_assets/gallery_img/2.jpg",
+  //   "/attached_assets/gallery_img/3.jpg",
+  //   "/attached_assets/gallery_img/4.jpg",
+  //   "/attached_assets/gallery_img/5.jpeg",
+  //   "/attached_assets/gallery_img/6.jpeg",
+  //   "/attached_assets/gallery_img/7.JPG",
+  //   "/attached_assets/gallery_img/8.jpg",
+  //   "/attached_assets/gallery_img/9.jpg",
+  //   "/attached_assets/gallery_img/10.jpg",
+  //   "/attached_assets/gallery_img/11.jpg",
+  //   "/attached_assets/gallery_img/12.jpeg",
+  //   "/attached_assets/gallery_img/13.jpeg",
+  //   "/attached_assets/gallery_img/14.jpeg",
+  //   "/attached_assets/gallery_img/15.jpeg",
+  //   "/attached_assets/gallery_img/16.jpg",
+  // ];
+
+  const galleryImages = ids.map(
+    (id) => `https://drive.google.com/thumbnail?id=${id}&sz=w1000`
+  );
 
   useEffect(() => {
     if (isAnimating) {

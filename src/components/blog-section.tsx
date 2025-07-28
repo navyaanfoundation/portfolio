@@ -5,26 +5,24 @@ export default function BlogSection() {
   const blogPosts = [
     {
       image:
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      date: "December 15, 2024",
+        "/attached_assets/blogs/1.jpg",
+      date: "2nd June 2025",
       title: "National Environment Conclave 2025: Inspiring Change in Jaipur",
       description:
         "Our team played a key role in organizing the 5-day National Environment Conclave at RFWTI, Jaipur, in partnership with CCoNREPCC and the Rajasthan Pollution Control Board. Highlights included Youth Parliament, Innovation to Industry sessions, cultural events, and a grand cyclothon. Grateful for the guidance of Smt. Shailaja Deval, IFS.",
       alt: "Students learning computer skills in new digital center",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      date: "December 10, 2024",
+      image: "/attached_assets/blogs/2.jpg",
+      date: "2nd July 2025",
       title: "Honored to Moderate Young Indian Parliament, Jaipur",
       description:
         "Served as Moderator and Jury at the Young Indian Parliament (City Round) organized by CII at Hotel Royal Orchid. Ten students are now selected for the next rounds at Kanpur and Delhi. A truly inspiring experience with young leaders!",
       alt: "Medical professionals conducting health screening at village camp",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=200",
-      date: "December 5, 2024",
+      image: "/attached_assets/blogs/3.jpg",
+      date: "26 feb 2025",
       title: "Shiv Mahabhishek, Divine Bath & Rudraksh Distribution",
       description:
         "Sh. Avinash Gehlot, Cabinet Minister of Social Justice & Empowerment (Rajasthan), led the sacred Shiv Mahabhishek ceremony and distributed rudraksh to devotees, creating a spiritual and memorable event.",
