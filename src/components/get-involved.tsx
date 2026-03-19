@@ -85,7 +85,7 @@ export default function GetInvolved() {
                 <div><strong>IFSC Code:</strong> SBIN0031840</div>
                 <div><strong>Bank:</strong> State Bank of India (SBI)</div>
                 <div className="mt-3 pt-3 border-t border-white/20">
-                  <strong>UPI ID:</strong> 9828390745a@sbi
+              <strong>UPI ID:</strong> 9828390745a@sbi (SBI UPI)
                 </div>
               </div>
             </div>
