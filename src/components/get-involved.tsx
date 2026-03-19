@@ -81,9 +81,12 @@ export default function GetInvolved() {
               <p className="opacity-90 mb-4">Direct bank transfer details</p>
               <div className="space-y-2 text-sm">
                 <div><strong>Account Name:</strong> Navyaan Foundation</div>
-                <div><strong>Account Number:</strong> XXXX-XXXX-XXXX</div>
-                <div><strong>IFSC Code:</strong> XXXXXX</div>
-                <div><strong>Bank:</strong> [Bank Name]</div>
+                <div><strong>Account Number:</strong> 44993143305</div>
+                <div><strong>IFSC Code:</strong> SBIN0031840</div>
+                <div><strong>Bank:</strong> State Bank of India (SBI)</div>
+                <div className="mt-3 pt-3 border-t border-white/20">
+                  <strong>UPI ID:</strong> 9828390745a@sbi
+                </div>
               </div>
             </div>
           </div>
