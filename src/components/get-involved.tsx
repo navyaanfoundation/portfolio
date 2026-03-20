@@ -109,7 +109,7 @@ export default function GetInvolved() {
                   <p className="font-semibold mb-3">Scan QR Code to Pay:</p>
                   <div className="bg-white p-4 rounded-lg inline-block">
                     <img 
-                      src="/attached_assets/bank_qr_code.jpg" 
+                      src="/attached_assets/bank_qr_code.jpeg" 
                       alt="UPI QR Code for Donations" 
                       className="w-48 h-48 object-contain"
                     />
