@@ -1,4 +1,4 @@
-import { Leaf, MapPin, Phone, Mail, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Leaf, MapPin, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
@@ -31,18 +31,21 @@ export default function Footer() {
               Creating sustainable impact in education, health, and environment across India.
             </p>
             <div className="flex space-x-4">
-              <Button size="sm" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(158,49%,36%)] transition-colors">
-                <Facebook size={16} />
-              </Button>
-              <Button size="sm" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(158,49%,36%)] transition-colors">
-                <Instagram size={16} />
-              </Button>
-              <Button size="sm" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(158,49%,36%)] transition-colors">
-                <Twitter size={16} />
-              </Button>
-              <Button size="sm" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(158,49%,36%)] transition-colors">
-                <Linkedin size={16} />
-              </Button>
+              <a href="https://www.facebook.com/share/1AkwcWDt25/" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(158,49%,36%)] transition-colors">
+                  <Facebook size={16} />
+                </Button>
+              </a>
+              <a href="https://www.instagram.com/navyaanfoundation?igsh=aXl0MGxpdW91eWRn" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(158,49%,36%)] transition-colors">
+                  <Instagram size={16} />
+                </Button>
+              </a>
+              <a href="https://www.linkedin.com/in/navyaan-foundation-196b78378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[hsl(158,49%,36%)] transition-colors">
+                  <Linkedin size={16} />
+                </Button>
+              </a>
             </div>
           </div>
           
@@ -80,7 +83,7 @@ export default function Footer() {
         
         <div className="border-t border-white/20 mt-8 pt-8 text-center">
           <p className="text-gray-300">
-            © 2024 Navyaan Foundation. All rights reserved. | Innovating Change, Inspiring Progress.
+            © 2026 Navyaan Foundation. All rights reserved. | Innovating Change, Inspiring Progress.
           </p>
         </div>
       </div>
