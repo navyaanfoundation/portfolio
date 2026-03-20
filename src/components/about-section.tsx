@@ -94,7 +94,7 @@ export default function AboutSection() {
             {/* Raja Yadav - Co-Founder & Trustee */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <img 
-                src="/attached_assets/raja_yadav.jpg" 
+                src="/attached_assets/raja_yadav.jpeg" 
                 alt="Raja Yadav - Co-Founder & Trustee" 
                 className="w-full h-64 object-cover"
               />
