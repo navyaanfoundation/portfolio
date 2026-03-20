@@ -73,9 +73,9 @@ export default function Footer() {
                 <Phone className="mr-2 mt-1 flex-shrink-0" size={16} />
                 <span>+91 78910 15777, +91 98283 90745</span>
               </p>
-              <p className="flex items-center">
-                <Mail className="mr-2 flex-shrink-0" size={16} />
-                info@navyaanfoundation.org
+              <p className="flex items-start">
+                <Mail className="mr-2 mt-1 flex-shrink-0" size={16} />
+                <span>info@navyaanfoundation.org<br />navyaanfoundation@gmail.com</span>
               </p>
             </div>
           </div>
