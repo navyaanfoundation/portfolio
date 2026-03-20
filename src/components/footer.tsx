@@ -62,16 +62,16 @@ export default function Footer() {
           <div>
             <h4 className="font-['Poppins'] font-bold text-lg mb-4">Contact</h4>
             <div className="space-y-2 text-gray-300">
-              <p className="flex items-center">
-                <MapPin className="mr-2" size={16} />
-                Jaipur, Rajasthan, India
+              <p className="flex items-start">
+                <MapPin className="mr-2 mt-1 flex-shrink-0" size={16} />
+                <span>R 60 North Part, Kailashpuri, Manoharpura, Jagatpura, Jaipur - 302027</span>
+              </p>
+              <p className="flex items-start">
+                <Phone className="mr-2 mt-1 flex-shrink-0" size={16} />
+                <span>+91 78910 15777, +91 98283 90745</span>
               </p>
               <p className="flex items-center">
-                <Phone className="mr-2" size={16} />
-                +91 XXXXX XXXXX
-              </p>
-              <p className="flex items-center">
-                <Mail className="mr-2" size={16} />
+                <Mail className="mr-2 flex-shrink-0" size={16} />
                 info@navyaanfoundation.org
               </p>
             </div>
