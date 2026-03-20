@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -159,18 +159,21 @@ export default function ContactSection() {
               <div className="mt-8">
                 <h4 className="font-semibold text-gray-900 mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
-                  <Button size="sm" className="w-10 h-10 bg-[hsl(158,49%,36%)] text-white rounded-full flex items-center justify-center hover:bg-[hsl(207,100%,20%)] transition-colors">
-                    <Facebook size={16} />
-                  </Button>
-                  <Button size="sm" className="w-10 h-10 bg-[hsl(158,49%,36%)] text-white rounded-full flex items-center justify-center hover:bg-[hsl(207,100%,20%)] transition-colors">
-                    <Instagram size={16} />
-                  </Button>
-                  <Button size="sm" className="w-10 h-10 bg-[hsl(158,49%,36%)] text-white rounded-full flex items-center justify-center hover:bg-[hsl(207,100%,20%)] transition-colors">
-                    <Twitter size={16} />
-                  </Button>
-                  <Button size="sm" className="w-10 h-10 bg-[hsl(158,49%,36%)] text-white rounded-full flex items-center justify-center hover:bg-[hsl(207,100%,20%)] transition-colors">
-                    <Linkedin size={16} />
-                  </Button>
+                  <a href="https://www.facebook.com/share/1AkwcWDt25/" target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="w-10 h-10 bg-[hsl(158,49%,36%)] text-white rounded-full flex items-center justify-center hover:bg-[hsl(207,100%,20%)] transition-colors">
+                      <Facebook size={16} />
+                    </Button>
+                  </a>
+                  <a href="https://www.instagram.com/navyaanfoundation?igsh=aXl0MGxpdW91eWRn" target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="w-10 h-10 bg-[hsl(158,49%,36%)] text-white rounded-full flex items-center justify-center hover:bg-[hsl(207,100%,20%)] transition-colors">
+                      <Instagram size={16} />
+                    </Button>
+                  </a>
+                  <a href="https://www.linkedin.com/in/navyaan-foundation-196b78378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="w-10 h-10 bg-[hsl(158,49%,36%)] text-white rounded-full flex items-center justify-center hover:bg-[hsl(207,100%,20%)] transition-colors">
+                      <Linkedin size={16} />
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>
