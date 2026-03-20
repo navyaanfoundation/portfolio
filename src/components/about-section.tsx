@@ -42,33 +42,21 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h2 className="font-['Poppins'] font-bold text-4xl text-[hsl(207,100%,20%)] mb-6">About Navyaan Foundation</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-['Poppins'] font-bold text-xl text-[hsl(158,49%,36%)] mb-2">Our Mission</h3>
-                <p className="text-gray-600">
-                  To create sustainable social impact through innovative solutions that empower communities in education, health, and environmental conservation.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-['Poppins'] font-bold text-xl text-[hsl(158,49%,36%)] mb-2">Our Vision</h3>
-                <p className="text-gray-600">
-                  A world where every individual has access to quality education, healthcare, and a sustainable environment for a better future.
-                </p>
-              </div>
+        {/* About Text */}
+        <div className="text-center mb-16">
+          <h2 className="font-['Poppins'] font-bold text-4xl text-[hsl(207,100%,20%)] mb-6">About Navyaan Foundation</h2>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div>
+              <h3 className="font-['Poppins'] font-bold text-xl text-[hsl(158,49%,36%)] mb-2">Our Mission</h3>
+              <p className="text-gray-600">
+                To create sustainable social impact through innovative solutions that empower communities in education, health, and environmental conservation.
+              </p>
             </div>
-          </div>
-          <div className="relative">
-            <img 
-              src="/attached_assets/about_us_mamta.jpg" 
-              alt="Mamta Sharma, Founder of Navyaan Foundation" 
-              className="rounded-xl shadow-lg"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-xl flex flex-col text-center justify-end p-6">
-              <h4 className="text-white font-['Poppins'] font-bold text-2xl">Mamta Sharma</h4>
-              <p className="text-white/90 font-['Poppins']">Founder - Navyaan Foundation</p>
+            <div>
+              <h3 className="font-['Poppins'] font-bold text-xl text-[hsl(158,49%,36%)] mb-2">Our Vision</h3>
+              <p className="text-gray-600">
+                A world where every individual has access to quality education, healthcare, and a sustainable environment for a better future.
+              </p>
             </div>
           </div>
         </div>
@@ -76,28 +64,31 @@ export default function AboutSection() {
         {/* Leadership Team */}
         <div className="mb-16">
           <h3 className="font-['Poppins'] font-bold text-3xl text-center text-[hsl(207,100%,20%)] mb-12">Our Leadership</h3>
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Mamta Sharma - Founder */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Mamta Sharma - Founder & Managing Trustee */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img 
-                src="/attached_assets/about_us_mamta.jpg" 
-                alt="Mamta Sharma - Founder" 
-                className="w-full h-64 object-cover"
-              />
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/about_us_mamta.jpg" 
+                  alt="Mamta Sharma - Founder & Managing Trustee" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-xl text-[hsl(207,100%,20%)] mb-2">Mamta Sharma</h4>
-                <p className="text-[hsl(158,49%,36%)] font-semibold mb-3">Founder</p>
-                <p className="text-gray-600 text-sm">Leading Navyaan Foundation's mission to create sustainable social impact across education, health, and environmental conservation.</p>
+                <p className="text-[hsl(158,49%,36%)] font-semibold">Founder & Managing Trustee</p>
               </div>
             </div>
 
             {/* Raja Yadav - Co-Founder & Trustee */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <img 
-                src="/attached_assets/raja_yadav.jpeg" 
-                alt="Raja Yadav - Co-Founder & Trustee" 
-                className="w-full h-64 object-cover"
-              />
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/raja_yadav.jpeg" 
+                  alt="Raja Yadav - Co-Founder & Trustee" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-xl text-[hsl(207,100%,20%)] mb-2">Raja Yadav</h4>
                 <p className="text-[hsl(158,49%,36%)] font-semibold mb-3">Co-Founder & Trustee</p>
