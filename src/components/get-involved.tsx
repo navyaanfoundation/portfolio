@@ -2,6 +2,13 @@ import { Button } from "@/components/ui/button";
 import { HandHeart, Handshake, Heart, CreditCard, Smartphone, Building } from "lucide-react";
 
 export default function GetInvolved() {
+  const scrollToBankDetails = () => {
+    const element = document.getElementById('bank-details');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   return (
     <section id="involve" className="py-16 bg-[hsl(158,49%,36%)] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +27,10 @@ export default function GetInvolved() {
             <p className="opacity-90 mb-6">
               Join our team of dedicated volunteers and make a direct impact in communities. Your time and skills can transform lives.
             </p>
-            <Button className="bg-white text-[hsl(158,49%,36%)] px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+            <Button 
+              onClick={() => window.location.href = 'mailto:navyaanfoundation@gmail.com?subject=Volunteer Application'}
+              className="bg-white text-[hsl(158,49%,36%)] px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
+            >
               Become a Volunteer
             </Button>
           </div>
@@ -34,7 +44,10 @@ export default function GetInvolved() {
             <p className="opacity-90 mb-6">
               Collaborate with us to amplify impact. We welcome partnerships with organizations sharing our vision for positive change.
             </p>
-            <Button className="bg-white text-[hsl(158,49%,36%)] px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
+            <Button 
+              onClick={() => window.location.href = 'mailto:navyaanfoundation@gmail.com?subject=Partnership Inquiry'}
+              className="bg-white text-[hsl(158,49%,36%)] px-6 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors"
+            >
               Explore Partnership
             </Button>
           </div>
@@ -48,14 +61,17 @@ export default function GetInvolved() {
             <p className="opacity-90 mb-6">
               Your generous contributions help us expand our reach and create sustainable impact in education, health, and environment.
             </p>
-            <Button className="bg-[hsl(51,100%,50%)] text-[hsl(207,100%,20%)] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors">
+            <Button 
+              onClick={scrollToBankDetails}
+              className="bg-[hsl(51,100%,50%)] text-[hsl(207,100%,20%)] px-6 py-3 rounded-full font-bold hover:bg-yellow-300 transition-colors"
+            >
               Donate Now
             </Button>
           </div>
         </div>
         
         {/* Donation Options */}
-        <div className="mt-16 bg-white/10 backdrop-blur rounded-xl p-8">
+        <div id="bank-details" className="mt-16 bg-white/10 backdrop-blur rounded-xl p-8">
           <h3 className="font-['Poppins'] font-bold text-2xl text-center mb-8">Support Our Mission</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -85,7 +101,19 @@ export default function GetInvolved() {
                 <div><strong>IFSC Code:</strong> SBIN0031840</div>
                 <div><strong>Bank:</strong> State Bank of India (SBI)</div>
                 <div className="mt-3 pt-3 border-t border-white/20">
-              <strong>UPI ID:</strong> 9828390745a@sbi (SBI UPI)
+                  <strong>UPI ID:</strong> 9828390745a@sbi
+                </div>
+                
+                {/* QR Code */}
+                <div className="mt-6 pt-4 border-t border-white/20">
+                  <p className="font-semibold mb-3">Scan QR Code to Pay:</p>
+                  <div className="bg-white p-4 rounded-lg inline-block">
+                    <img 
+                      src="/attached_assets/bank_qr_code.jpg" 
+                      alt="UPI QR Code for Donations" 
+                      className="w-48 h-48 object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
