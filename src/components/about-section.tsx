@@ -82,17 +82,16 @@ export default function AboutSection() {
 
             {/* Raja Yadav - Co-Founder & Trustee */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden bg-gray-100">
                 <img 
                   src="/attached_assets/raja_yadav.jpeg" 
                   alt="Raja Yadav - Co-Founder & Trustee" 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-xl text-[hsl(207,100%,20%)] mb-2">Raja Yadav</h4>
-                <p className="text-[hsl(158,49%,36%)] font-semibold mb-3">Co-Founder & Trustee</p>
-                <p className="text-gray-600 text-sm">Driving strategic initiatives and partnerships to amplify our impact in communities across India.</p>
+                <p className="text-[hsl(158,49%,36%)] font-semibold">Co-Founder & Trustee</p>
               </div>
             </div>
           </div>
