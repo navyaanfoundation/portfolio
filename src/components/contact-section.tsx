@@ -113,17 +113,25 @@ export default function ContactSection() {
               <div className="space-y-6">
                 <div className="flex items-start">
                   <MapPin className="text-[hsl(158,49%,36%)] text-xl mr-4 mt-1" size={20} />
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
-                    <p className="text-gray-600">
-                      Navyaan Foundation<br />
-                      Jaipur, Rajasthan, India
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <Phone className="text-[hsl(158,49%,36%)] text-xl mr-4 mt-1" size={20} />
+                  <div className="flex items-start">
+  <MapPin className="text-[hsl(158,49%,36%)] text-xl mr-4 mt-1" size={20} />
+  <div>
+    <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
+    <p className="text-gray-600">
+      Navyaan Foundation<br />
+      R 60 North Part, Kailashpuri,<br />
+      Manoharpura, Jagatpura,<br />
+      Jaipur - 302027, Rajasthan, India
+    <div className="flex items-start">
+  <Phone className="text-[hsl(158,49%,36%)] text-xl mr-4 mt-1" size={20} />
+  <div>
+    <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
+    <p className="text-gray-600">
+      +91 78910 15777<br />
+      +91 98283 90745
+    </p>
+  </div>
+</div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
                     <p className="text-gray-600">+91 XXXXX XXXXX</p>
