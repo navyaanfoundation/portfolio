@@ -42,7 +42,7 @@ export default function AboutSection() {
   return (
     <section id="about" className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="font-['Poppins'] font-bold text-4xl text-[hsl(207,100%,20%)] mb-6">About Navyaan Foundation</h2>
             <div className="space-y-6">
@@ -72,9 +72,43 @@ export default function AboutSection() {
             </div>
           </div>
         </div>
+
+        {/* Leadership Team */}
+        <div className="mb-16">
+          <h3 className="font-['Poppins'] font-bold text-3xl text-center text-[hsl(207,100%,20%)] mb-12">Our Leadership</h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Mamta Sharma - Founder */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img 
+                src="/attached_assets/about_us_mamta.jpg" 
+                alt="Mamta Sharma - Founder" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-xl text-[hsl(207,100%,20%)] mb-2">Mamta Sharma</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold mb-3">Founder</p>
+                <p className="text-gray-600 text-sm">Leading Navyaan Foundation's mission to create sustainable social impact across education, health, and environmental conservation.</p>
+              </div>
+            </div>
+
+            {/* Raja Yadav - Co-Founder & Trustee */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <img 
+                src="/attached_assets/raja_yadav.jpg" 
+                alt="Raja Yadav - Co-Founder & Trustee" 
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-xl text-[hsl(207,100%,20%)] mb-2">Raja Yadav</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold mb-3">Co-Founder & Trustee</p>
+                <p className="text-gray-600 text-sm">Driving strategic initiatives and partnerships to amplify our impact in communities across India.</p>
+              </div>
+            </div>
+          </div>
+        </div>
         
         {/* Core Values */}
-        <div className="mt-16">
+        <div>
           <h3 className="font-['Poppins'] font-bold text-3xl text-center text-[hsl(207,100%,20%)] mb-12">Our Core Values</h3>
           <div className="grid md:grid-cols-5 gap-6">
             {values.map((value, index) => (
