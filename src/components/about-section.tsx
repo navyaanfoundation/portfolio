@@ -101,6 +101,21 @@ export default function AboutSection() {
         <div className="mb-16">
           <h3 className="font-['Poppins'] font-bold text-3xl text-center text-[hsl(207,100%,20%)] mb-12">Our Team</h3>
           <div className="grid md:grid-cols-3 gap-8">
+            {/* Vijeta Maheshwari */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/vijeta_maheshwari.jpg" 
+                  alt="Vijeta Maheshwari - Director – Government Relations & Partnerships" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Vijeta Maheshwari</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Director – Government Relations & Partnerships</p>
+              </div>
+            </div>
+
             {/* Abhishek Verma */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
