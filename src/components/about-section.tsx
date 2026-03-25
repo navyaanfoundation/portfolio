@@ -61,7 +61,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Leadership Team */}
+        {/* Leadership */}
         <div className="mb-16">
           <h3 className="font-['Poppins'] font-bold text-3xl text-center text-[hsl(207,100%,20%)] mb-12">Our Leadership</h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -92,6 +92,102 @@ export default function AboutSection() {
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-xl text-[hsl(207,100%,20%)] mb-2">Raja Yadav</h4>
                 <p className="text-[hsl(158,49%,36%)] font-semibold">Co-Founder & Trustee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Team */}
+        <div className="mb-16">
+          <h3 className="font-['Poppins'] font-bold text-3xl text-center text-[hsl(207,100%,20%)] mb-12">Our Team</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Abhishek Verma */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/abhishek_verma.jpg" 
+                  alt="Abhishek Verma - Chief Programs & Impact Officer" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Abhishek Verma</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Programs & Impact Officer</p>
+              </div>
+            </div>
+
+            {/* Ruchika Badesra */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/ruchika_badesra.jpg" 
+                  alt="Ruchika Badesra - Chief Strategy Officer" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Ruchika Badesra</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Strategy Officer</p>
+              </div>
+            </div>
+
+            {/* Swati Sharma */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/swati_sharma.jpg" 
+                  alt="Swati Sharma - Chief Operations Officer" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Swati Sharma</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Operations Officer</p>
+              </div>
+            </div>
+
+            {/* Deepa Jain */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/deepa_jain.jpg" 
+                  alt="Deepa Jain - Chief Community Engagement Officer" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Deepa Jain</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Community Engagement Officer</p>
+              </div>
+            </div>
+
+            {/* Manjusha Mulchandani */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/manjusha_mulchandani.jpg" 
+                  alt="Manjusha Mulchandani - Chief Events & Outreach Officer" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Manjusha Mulchandani</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Events & Outreach Officer</p>
+              </div>
+            </div>
+
+            {/* Garima Sharma */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img 
+                  src="/attached_assets/garima_sharma.jpg" 
+                  alt="Garima Sharma - Social Ambassador" 
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Garima Sharma</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Social Ambassador</p>
               </div>
             </div>
           </div>
