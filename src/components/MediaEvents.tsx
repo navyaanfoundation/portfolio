@@ -66,21 +66,26 @@ const videoLinks = [
 
 const B = { navy:"#002D62", teal:"#00796B", gold:"#C9A032", pink:"#C2185B", ivory:"#F8F7F3" };
 
+// ── Types ──────────────────────────────────────────────────
+interface Photo { id: number; link: string; }
+interface MediaItem { id: number; paper: string; color: string; link: string; }
+interface VideoItem { id: number; title: string; platform: string; url: string; icon: string; color: string; }
+
 // ── Photo grid card ────────────────────────────────────────
-function PhotoCard({ photo, index }) {
+function PhotoCard({ photo, index }: { photo: Photo; index: number }) {
   return (
     <a
       href={photo.link}
       target="_blank"
       rel="noopener noreferrer"
       style={{
-        display:"block", borderRadius:12, overflow:"hidden",
+        borderRadius:12, overflow:"hidden",
         background:`linear-gradient(135deg, ${B.pink}18, ${B.teal}18)`,
         boxShadow:"0 2px 12px rgba(0,0,0,0.08)",
         transition:"transform 0.2s, box-shadow 0.2s",
         textDecoration:"none", border:`1px solid ${B.pink}30`,
         minHeight:160,
-        display:"flex", flexDirection:"column",
+        display:"flex", flexDirection:"column" as const,
         alignItems:"center", justifyContent:"center",
       }}
       onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-4px)";e.currentTarget.style.boxShadow="0 8px 24px rgba(0,0,0,0.15)";}}
@@ -98,7 +103,7 @@ function PhotoCard({ photo, index }) {
 }
 
 // ── Media card ─────────────────────────────────────────────
-function MediaCard({ item }) {
+function MediaCard({ item }: { item: MediaItem }) {
   const isOnline = !item.link.includes("ibb.co");
   return (
     <a
@@ -128,7 +133,7 @@ function MediaCard({ item }) {
       <div style={{
         padding:"18px 14px",
         background:`${item.color}10`,
-        display:"flex", flexDirection:"column",
+        display:"flex", flexDirection:"column" as const,
         alignItems:"center", justifyContent:"center",
         minHeight:100,
       }}>
@@ -145,7 +150,7 @@ function MediaCard({ item }) {
 
 // ── MAIN ───────────────────────────────────────────────────
 export default function MediaEvents() {
-  const [tab, setTab] = useState("photos");
+  const [tab, setTab] = useState<string>("photos");
 
   const tabs = [
     { key:"photos", label:"📸 Event Photos",   count:eventPhotos.length },
@@ -280,7 +285,7 @@ export default function MediaEvents() {
 
         {/* Videos tab */}
         {tab === "videos" && (
-          <div style={{display:"flex", flexDirection:"column", gap:12, maxWidth:780, margin:"0 auto"}}>
+          <div style={{display:"flex", flexDirection:"column" as const, gap:12, maxWidth:780, margin:"0 auto"}}>
             {videoLinks.map(v => (
               <a
                 key={v.id}
