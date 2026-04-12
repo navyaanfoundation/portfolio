@@ -6,30 +6,18 @@ interface VideoItem { id: number; title: string; platform: string; url: string; 
 
 // ── ALL 24 EVENT PHOTOS — confirmed valid from ImgBB album ───
 const eventPhotos: Photo[] = [
-  { id:1,  img:"https://i.ibb.co/kgnPpSDJ/038A7956.jpg",                                link:"https://ibb.co/kgnPpSDJ" },
-  { id:2,  img:"https://i.ibb.co/5ht4N1wc/038A7993.jpg",                                link:"https://ibb.co/5ht4N1wc" },
-  { id:3,  img:"https://i.ibb.co/sJHz3FMx/038A8021.jpg",                                link:"https://ibb.co/sJHz3FMx" },
-  { id:4,  img:"https://i.ibb.co/W4QrZ3Bv/038A8025.jpg",                                link:"https://ibb.co/W4QrZ3Bv" },
-  { id:5,  img:"https://i.ibb.co/N67R1pC0/038A8047.jpg",                                link:"https://ibb.co/N67R1pC0" },
-  { id:6,  img:"https://i.ibb.co/8nFz9zQz/038A8101.jpg",                                link:"https://ibb.co/8nFz9zQz" },
-  { id:7,  img:"https://i.ibb.co/tTQZ1xQW/038A8120.jpg",                                link:"https://ibb.co/tTQZ1xQW" },
-  { id:8,  img:"https://i.ibb.co/kg5mRyRs/038A8327.jpg",                                link:"https://ibb.co/kg5mRyRs" },
-  { id:9,  img:"https://i.ibb.co/m50pJ84N/Whats-App-Image-2026-04-12-at-13-54-41.jpg", link:"https://ibb.co/m50pJ84N" },
-  { id:10, img:"https://i.ibb.co/CpnfTS22/038A8417.jpg",                                link:"https://ibb.co/CpnfTS22" },
-  { id:11, img:"https://i.ibb.co/fd8xKfx8/Whats-App-Image-2026-04-12-at-13-54-42.jpg", link:"https://ibb.co/fd8xKfx8" },
-  { id:12, img:"https://i.ibb.co/Y7gFpX15/Whats-App-Image-2026-04-12-at-13-54-43.jpg", link:"https://ibb.co/Y7gFpX15" },
-  { id:13, img:"https://i.ibb.co/674kcVHH/Whats-App-Image-2026-04-12-at-13-54-44.jpg", link:"https://ibb.co/674kcVHH" },
-  { id:14, img:"https://i.ibb.co/SDkr4067/Whats-App-Image-2026-04-12-at-13-54-45.jpg", link:"https://ibb.co/SDkr4067" },
-  { id:15, img:"https://i.ibb.co/gFFhfgGR/Whats-App-Image-2026-04-12-at-13-54-46-1.jpg",link:"https://ibb.co/gFFhfgGR"},
-  { id:16, img:"https://i.ibb.co/TBwmK1sJ/Whats-App-Image-2026-04-12-at-13-54-46.jpg",  link:"https://ibb.co/TBwmK1sJ"},
-  { id:17, img:"https://i.ibb.co/vCPFhYK7/Whats-App-Image-2026-04-12-at-13-54-47-1.jpg",link:"https://ibb.co/vCPFhYK7"},
-  { id:18, img:"https://i.ibb.co/n8CrNxBK/Whats-App-Image-2026-04-12-at-13-54-47.jpg",  link:"https://ibb.co/n8CrNxBK"},
-  { id:19, img:"https://i.ibb.co/LzY6q60D/Whats-App-Image-2026-04-12-at-13-54-48-1.jpg",link:"https://ibb.co/LzY6q60D"},
-  { id:20, img:"https://i.ibb.co/GvNZp2q3/Whats-App-Image-2026-04-12-at-13-54-48.jpg",  link:"https://ibb.co/GvNZp2q3"},
-  { id:21, img:"https://i.ibb.co/MTs11RY/Whats-App-Image-2026-04-12-at-13-54-49.jpg",    link:"https://ibb.co/MTs11RY" },
-  { id:22, img:"https://i.ibb.co/hx6NZnDV/Whats-App-Image-2026-04-12-at-13-54-50-1.jpg", link:"https://ibb.co/hx6NZnDV"},
-  { id:23, img:"https://i.ibb.co/fzgxXWn2/Whats-App-Image-2026-04-12-at-13-54-51-1.jpg", link:"https://ibb.co/fzgxXWn2"},
-  { id:24, img:"https://i.ibb.co/7JRjVxfv/Whats-App-Image-2026-04-12-at-13-54-51.jpg",   link:"https://ibb.co/7JRjVxfv"},
+  { id:1,  img:"https://i.ibb.co/DD8zkPJ4/Whats-App-Image-2026-04-12-at-13-54-51.jpg",   link:"https://ibb.co/7JRjVxfv"  },
+  { id:2,  img:"https://i.ibb.co/FLrDh10K/Whats-App-Image-2026-04-12-at-13-54-51-1.jpg",  link:"https://ibb.co/fzgxXWn2"  },
+  { id:3,  img:"https://i.ibb.co/4wqLYDPp/Whats-App-Image-2026-04-12-at-13-54-50-1.jpg",  link:"https://ibb.co/hx6NZnDV"  },
+  { id:4,  img:"https://i.ibb.co/NhsNNL8/Whats-App-Image-2026-04-12-at-13-54-49.jpg",     link:"https://ibb.co/MTs11RY"   },
+  { id:5,  img:"https://i.ibb.co/27HzhtTY/Whats-App-Image-2026-04-12-at-13-54-48.jpg",     link:"https://ibb.co/GvNZp2q3"  },
+  { id:6,  img:"https://i.ibb.co/PZF4b4rs/Whats-App-Image-2026-04-12-at-13-54-48-1.jpg",   link:"https://ibb.co/LzY6q60D"  },
+  { id:7,  img:"https://i.ibb.co/YTZ2FHXV/Whats-App-Image-2026-04-12-at-13-54-47.jpg",     link:"https://ibb.co/n8CrNxBK"  },
+  { id:8,  img:"https://i.ibb.co/MyVvf63Y/Whats-App-Image-2026-04-12-at-13-54-47-1.jpg",   link:"https://ibb.co/vCPFhYK7"  },
+  { id:9,  img:"https://i.ibb.co/DD15GYZm/Whats-App-Image-2026-04-12-at-13-54-46.jpg",     link:"https://ibb.co/TBwmK1sJ"  },
+  { id:10, img:"https://i.ibb.co/Z117FT3M/Whats-App-Image-2026-04-12-at-13-54-46-1.jpg",   link:"https://ibb.co/gFFhfgGR"  },
+  { id:11, img:"https://i.ibb.co/p6HyBZ1r/Whats-App-Image-2026-04-12-at-13-54-45.jpg",     link:"https://ibb.co/SDkr4067"  },
+  { id:12, img:"https://i.ibb.co/0Rfxp8CC/Whats-App-Image-2026-04-12-at-13-54-44.jpg",     link:"https://ibb.co/674kcVHH"  },
 ];
 
 // ── ALL 19 MEDIA CLIPS ────────────────────────────────────────
@@ -66,7 +54,6 @@ const videoLinks: VideoItem[] = [
 ];
 
 const B = { navy:"#002D62", teal:"#00796B", gold:"#C9A032", pink:"#C2185B", ivory:"#F8F7F3" };
-const INITIAL = 8;
 
 // ── Smart Photo Card — hides itself if image fails to load ────
 function PhotoCard({ photo, index }: { photo: Photo; index: number }) {
@@ -140,10 +127,7 @@ function MediaCard({ item }: { item: MediaItem }) {
 // ── MAIN COMPONENT ────────────────────────────────────────────
 export default function MediaEvents() {
   const [tab, setTab]           = useState<string>("photos");
-  const [showAll, setShowAll]   = useState<boolean>(false);
   const [showAllMedia, setShowAllMedia] = useState<boolean>(false);
-
-  const visible      = showAll      ? eventPhotos : eventPhotos.slice(0, INITIAL);
   const visibleMedia = showAllMedia ? mediaClips  : mediaClips.slice(0, 4);
 
   const tabs = [
@@ -220,7 +204,7 @@ export default function MediaEvents() {
         <div style={{display:"flex", justifyContent:"center", gap:10, marginBottom:32, flexWrap:"wrap"}}>
           {tabs.map(t => (
             <button key={t.key}
-              onClick={() => { setTab(t.key); setShowAll(false); setShowAllMedia(false); }}
+              onClick={() => { setTab(t.key); setShowAllMedia(false); }}
               style={{
                 padding:"10px 22px", borderRadius:30, cursor:"pointer",
                 fontSize:13.5, fontWeight:700, border:"2px solid",
@@ -242,37 +226,11 @@ export default function MediaEvents() {
           ))}
         </div>
 
-        {/* Photos Tab */}
+        {/* Photos Tab - all 8 shown directly */}
         {tab === "photos" && (
-          <>
-            <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))", gap:14}}>
-              {visible.map((p, i) => <PhotoCard key={p.id} photo={p} index={i} />)}
-            </div>
-            <div style={{textAlign:"center", marginTop:24}}>
-              {!showAll ? (
-                <button onClick={() => setShowAll(true)} style={{
-                  background:`linear-gradient(135deg, ${B.pink}, #E91E8C)`,
-                  color:"#fff", border:"none", borderRadius:30,
-                  padding:"12px 32px", fontSize:14, fontWeight:700,
-                  cursor:"pointer", boxShadow:"0 4px 16px rgba(194,24,91,0.3)",
-                  transition:"transform 0.2s",
-                }}
-                  onMouseEnter={e => (e.currentTarget.style.transform = "translateY(-2px)")}
-                  onMouseLeave={e => (e.currentTarget.style.transform = "translateY(0)")}
-                >
-                  View All {eventPhotos.length} Photos ↓
-                </button>
-              ) : (
-                <button onClick={() => setShowAll(false)} style={{
-                  background:"#fff", color:B.pink, border:`2px solid ${B.pink}`,
-                  borderRadius:30, padding:"10px 28px", fontSize:13.5,
-                  fontWeight:700, cursor:"pointer",
-                }}>
-                  Show Less ↑
-                </button>
-              )}
-            </div>
-          </>
+          <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))", gap:14}}>
+            {eventPhotos.map((p, i) => <PhotoCard key={p.id} photo={p} index={i} />)}
+          </div>
         )}
 
         {/* Media Tab */}
