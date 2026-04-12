@@ -126,9 +126,12 @@ function MediaCard({ item }: { item: MediaItem }) {
 
 // ── MAIN COMPONENT ────────────────────────────────────────────
 export default function MediaEvents() {
-  const [tab, setTab]           = useState<string>("photos");
+  const [tab, setTab]                   = useState<string>("photos");
+  const [showAll, setShowAll]           = useState<boolean>(false);
   const [showAllMedia, setShowAllMedia] = useState<boolean>(false);
-  const visibleMedia = showAllMedia ? mediaClips  : mediaClips.slice(0, 4);
+
+  const visiblePhotos = showAll      ? eventPhotos         : eventPhotos.slice(0, 8);
+  const visibleMedia  = showAllMedia ? mediaClips          : mediaClips.slice(0, 4);
 
   const tabs = [
     { key:"photos", label:"📸 Event Photos",  count: eventPhotos.length },
@@ -204,7 +207,7 @@ export default function MediaEvents() {
         <div style={{display:"flex", justifyContent:"center", gap:10, marginBottom:32, flexWrap:"wrap"}}>
           {tabs.map(t => (
             <button key={t.key}
-              onClick={() => { setTab(t.key); setShowAllMedia(false); }}
+              onClick={() => { setTab(t.key); setShowAll(false); setShowAllMedia(false); }}
               style={{
                 padding:"10px 22px", borderRadius:30, cursor:"pointer",
                 fontSize:13.5, fontWeight:700, border:"2px solid",
@@ -226,11 +229,40 @@ export default function MediaEvents() {
           ))}
         </div>
 
-        {/* Photos Tab - all 8 shown directly */}
+        {/* Photos Tab — 8 initially, View More shows all 12 */}
         {tab === "photos" && (
-          <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))", gap:14}}>
-            {eventPhotos.map((p, i) => <PhotoCard key={p.id} photo={p} index={i} />)}
-          </div>
+          <>
+            <div style={{display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))", gap:14}}>
+              {visiblePhotos.map((p, i) => <PhotoCard key={p.id} photo={p} index={i} />)}
+            </div>
+            {!showAll && eventPhotos.length > 8 && (
+              <div style={{textAlign:"center", marginTop:24}}>
+                <button onClick={() => setShowAll(true)} style={{
+                  background:`linear-gradient(135deg, ${B.pink}, #E91E8C)`,
+                  color:"#fff", border:"none", borderRadius:30,
+                  padding:"12px 32px", fontSize:14, fontWeight:700,
+                  cursor:"pointer", boxShadow:"0 4px 16px rgba(194,24,91,0.3)",
+                  transition:"transform 0.2s",
+                }}
+                  onMouseEnter={e => (e.currentTarget.style.transform = "translateY(-2px)")}
+                  onMouseLeave={e => (e.currentTarget.style.transform = "translateY(0)")}
+                >
+                  View More Photos ({eventPhotos.length - 8} more) ↓
+                </button>
+              </div>
+            )}
+            {showAll && (
+              <div style={{textAlign:"center", marginTop:20}}>
+                <button onClick={() => setShowAll(false)} style={{
+                  background:"#fff", color:B.pink, border:`2px solid ${B.pink}`,
+                  borderRadius:30, padding:"10px 28px", fontSize:13.5,
+                  fontWeight:700, cursor:"pointer",
+                }}>
+                  Show Less ↑
+                </button>
+              </div>
+            )}
+          </>
         )}
 
         {/* Media Tab */}
