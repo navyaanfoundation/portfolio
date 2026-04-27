@@ -21,7 +21,7 @@ interface MediaClip { paper: string; color: string; img: string; link: string; }
 interface Video     { title: string; platform: string; url: string; color: string; }
 interface Stat      { num: string; label: string; }
 
-interface Event {
+interface NavyaanEvent {
   id: number;
   title: string;
   subtitle?: string;
@@ -42,7 +42,7 @@ interface Event {
 // ══════════════════════════════════════════════════════════════
 //  EVENTS DATA — Add new events here at the TOP of the array
 // ══════════════════════════════════════════════════════════════
-const EVENTS: Event[] = [
+const EVENTS: NavyaanEvent[] = [
 
   // ── EVENT 1: AURA 2026 (Most Recent) ─────────────────────
   {
@@ -252,7 +252,7 @@ function MediaCard({ item }: { item: MediaClip }) {
 }
 
 // ── Event Card component ───────────────────────────────────
-function EventCard({ event }: { event: Event }) {
+function EventCard({ event }: { event: NavyaanEvent }) {
   const [tab, setTab]               = useState("photos");
   const [expanded, setExpanded]     = useState(event.id === 1);
   const [showAllPhotos, setShowAllPhotos] = useState(false);
@@ -655,4 +655,3 @@ export default function Events() {
     </div>
   );
 }
-
