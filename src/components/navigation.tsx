@@ -37,7 +37,7 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('work')} className="text-gray-700 hover:text-[hsl(158,49%,36%)] transition-colors">Our Work</button>
             <button onClick={() => scrollToSection('involve')} className="text-gray-700 hover:text-[hsl(158,49%,36%)] transition-colors">Get Involved</button>
             <button onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-[hsl(158,49%,36%)] transition-colors">Gallery</button>
-            <a href="/events" className="text-gray-700 hover:text-[hsl(158,49%,36%)] transition-colors font-medium">Events</a>
+            <button onClick={() => scrollToSection('media-events')} className="text-gray-700 hover:text-[hsl(158,49%,36%)] transition-colors font-medium">Events</button>
             <button onClick={() => scrollToSection('blog')} className="text-gray-700 hover:text-[hsl(158,49%,36%)] transition-colors">Blog</button>
             <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-[hsl(158,49%,36%)] transition-colors">Contact</button>
           </div>
@@ -68,7 +68,7 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('work')} className="block py-2 text-gray-700 w-full text-left">Our Work</button>
             <button onClick={() => scrollToSection('involve')} className="block py-2 text-gray-700 w-full text-left">Get Involved</button>
             <button onClick={() => scrollToSection('gallery')} className="block py-2 text-gray-700 w-full text-left">Gallery</button>
-            <a href="/events" className="block py-2 text-gray-700 w-full font-medium" onClick={() => setIsMobileMenuOpen(false)}>Events</a>
+            <button onClick={() => scrollToSection('media-events')} className="block py-2 text-gray-700 w-full text-left font-medium">Events</button>
             <button onClick={() => scrollToSection('blog')} className="block py-2 text-gray-700 w-full text-left">Blog</button>
             <button onClick={() => scrollToSection('contact')} className="block py-2 text-gray-700 w-full text-left">Contact</button>
           </div>
