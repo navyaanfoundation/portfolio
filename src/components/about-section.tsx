@@ -55,7 +55,7 @@ export default function AboutSection() {
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
-                <img src="/attached_assets/about_us_mamta.jpg" alt="Mamta Sharma - Founder & Managing Trustee" className="w-full h-full object-cover object-center"/>
+                <img src="/attached_assets/about_us_mamta.jpg" alt="Mamta Sharma - Founder & Managing Trustee" className="w-full h-full object-cover object-top"/>
               </div>
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-xl text-[hsl(207,100%,20%)] mb-2">Mamta Sharma</h4>
@@ -85,6 +85,15 @@ export default function AboutSection() {
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Vijeta Maheshwari</h4>
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Director – Government Relations & Partnerships</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src="https://i.ibb.co/DDPRjrkS/Whats-App-Image-2026-04-26-at-11-52-38.jpg" alt="Pritika Agrawal" className="w-full h-full object-cover object-center"/>
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Pritika Agrawal</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Science Education & Research Officer</p>
               </div>
             </div>
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
@@ -139,6 +148,17 @@ export default function AboutSection() {
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Garima Sharma</h4>
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Social Ambassador</p>
+              </div>
+            </div>
+
+            {/* Pritika Agrawal */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src="https://i.ibb.co/DDPRjrkS/Whats-App-Image-2026-04-26-at-11-52-38.jpg" alt="Pritika Agrawal" className="w-full h-full object-cover object-top"/>
+              </div>
+              <div className="p-6 text-center">
+                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Pritika Agrawal</h4>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Head of Academic Initiatives</p>
               </div>
             </div>
           </div>
