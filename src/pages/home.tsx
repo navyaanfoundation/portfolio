@@ -6,7 +6,6 @@ import AboutSection from "@/components/about-section";
 import OurWork from "@/components/our-work";
 import GetInvolved from "@/components/get-involved";
 import GallerySection from "@/components/gallery-section";
-import MediaEvents from "@/components/MediaEvents";
 import BlogSection from "@/components/blog-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
@@ -23,7 +22,7 @@ export default function Home() {
       <OurWork />
       <GetInvolved />
       <GallerySection />
-      <MediaEvents />
+      {/* REMOVED: <MediaEvents /> - Now Events is a separate page */}
       <BlogSection />
       <ContactSection />
       <Footer />
