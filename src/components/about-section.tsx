@@ -39,7 +39,7 @@ export default function AboutSection() {
                 <img
                   src="https://i.ibb.co/nMmRffTS/Whats-App-Image-2026-04-26-at-11-54-02.jpg"
                   alt="Mrs. Mamta Sharma - Chief Patron"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6 text-center">
@@ -78,6 +78,7 @@ export default function AboutSection() {
         <div className="mb-16">
           <h3 className="font-['Poppins'] font-bold text-3xl text-center text-[hsl(207,100%,20%)] mb-12">Our Team</h3>
           <div className="grid md:grid-cols-3 gap-8">
+            {/* 1. Vijeta Maheshwari */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src="/attached_assets/vijeta_maheshwari.jpg" alt="Vijeta Maheshwari" className="w-full h-full object-cover object-center"/>
@@ -87,15 +88,19 @@ export default function AboutSection() {
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Director – Government Relations & Partnerships</p>
               </div>
             </div>
+
+            {/* 2. Pritika Agrawal */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
-                <img src="https://i.ibb.co/DDPRjrkS/Whats-App-Image-2026-04-26-at-11-52-38.jpg" alt="Pritika Agrawal" className="w-full h-full object-cover object-center"/>
+                <img src="https://i.ibb.co/DDPRjrkS/Whats-App-Image-2026-04-26-at-11-52-38.jpg" alt="Pritika Agrawal" className="w-full h-full object-cover object-top"/>
               </div>
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Pritika Agrawal</h4>
-                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Science Education & Research Officer</p>
+                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Head of Academic Initiatives</p>
               </div>
             </div>
+
+            {/* 3. Abhishek Verma */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src="/attached_assets/abhishek_verma.jpg" alt="Abhishek Verma" className="w-full h-full object-cover object-center"/>
@@ -105,6 +110,8 @@ export default function AboutSection() {
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Programs & Impact Officer</p>
               </div>
             </div>
+
+            {/* 4. Ruchika Badesra */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src="/attached_assets/ruchika_badesra.jpg" alt="Ruchika Badesra" className="w-full h-full object-cover object-center"/>
@@ -114,6 +121,8 @@ export default function AboutSection() {
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Strategy Officer</p>
               </div>
             </div>
+
+            {/* 5. Swati Sharma */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src="/attached_assets/swati_sharma.jpg" alt="Swati Sharma" className="w-full h-full object-cover object-center"/>
@@ -123,6 +132,8 @@ export default function AboutSection() {
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Operations Officer</p>
               </div>
             </div>
+
+            {/* 6. Deepa Jain */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src="/attached_assets/deepa_jain.jpg" alt="Deepa Jain" className="w-full h-full object-cover object-center"/>
@@ -132,6 +143,8 @@ export default function AboutSection() {
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Community Engagement Officer</p>
               </div>
             </div>
+
+            {/* 7. Manjusha Mulchandani */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src="/attached_assets/manjusha_mulchandani.jpg" alt="Manjusha Mulchandani" className="w-full h-full object-cover object-center"/>
@@ -141,6 +154,8 @@ export default function AboutSection() {
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Chief Events & Outreach Officer</p>
               </div>
             </div>
+
+            {/* 8. Garima Sharma */}
             <div className="bg-white rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src="/attached_assets/garima_sharma.jpg" alt="Garima Sharma" className="w-full h-full object-cover object-center"/>
@@ -148,17 +163,6 @@ export default function AboutSection() {
               <div className="p-6 text-center">
                 <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Garima Sharma</h4>
                 <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Social Ambassador</p>
-              </div>
-            </div>
-
-            {/* Pritika Agrawal */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img src="https://i.ibb.co/DDPRjrkS/Whats-App-Image-2026-04-26-at-11-52-38.jpg" alt="Pritika Agrawal" className="w-full h-full object-cover object-top"/>
-              </div>
-              <div className="p-6 text-center">
-                <h4 className="font-['Poppins'] font-bold text-lg text-[hsl(207,100%,20%)] mb-2">Pritika Agrawal</h4>
-                <p className="text-[hsl(158,49%,36%)] font-semibold text-sm">Head of Academic Initiatives</p>
               </div>
             </div>
           </div>
