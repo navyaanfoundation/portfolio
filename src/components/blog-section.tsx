@@ -4,12 +4,27 @@ import { Calendar } from "lucide-react";
 export default function BlogSection() {
   const blogPosts = [
     {
-      image:
-        "/attached_assets/blogs/1.jpg",
+      image: "https://i.ibb.co/FLrDh10K/Whats-App-Image-2026-04-12-at-13-54-51-1.jpg",
+      date: "28th March 2026",
+      title: "AURA – The Power of She: 50 Women Achievers Honoured",
+      description:
+        "Navyaan Foundation successfully organised AURA – The Power of She, a prestigious Women's Empowerment Award Ceremony at Constitution Club of Rajasthan, Jaipur. 50 inspiring women were felicitated across Culture, Leadership & Social Impact.",
+      alt: "AURA The Power of She event by Navyaan Foundation",
+    },
+    {
+      image: "https://i.ibb.co/ccpWp5DS/Whats-App-Image-2026-04-26-at-13-27-44.jpg",
+      date: "5th October 2025",
+      title: "Wealth & Wellness Conclave: Balance Your Body, Grow Your Bank",
+      description:
+        "Navyaan Foundation co-organised the Wealth & Wellness Conclave at V2 Paradise Resort, Jaipur — featuring expert health talks, financial literacy workshops, and wellness sessions. An inspiring day for students, parents, professionals and senior citizens.",
+      alt: "Wealth and Wellness Conclave organised by Navyaan Foundation",
+    },
+    {
+      image: "/attached_assets/blogs/1.jpg",
       date: "2nd June 2025",
       title: "National Environment Conclave 2025: Inspiring Change in Jaipur",
       description:
-        "Our team played a key role in organizing the 5-day National Environment Conclave at RFWTI, Jaipur, in partnership with CCoNREPCC and the Rajasthan Pollution Control Board. Highlights included Youth Parliament, Innovation to Industry sessions, cultural events, and a grand cyclothon. Grateful for the guidance of Smt. Shailaja Deval, IFS.",
+        "Our team played a key role in organizing the 5-day National Environment Conclave at RFWTI, Jaipur, in partnership with CCoNREPCC and the Rajasthan Pollution Control Board. Highlights included Youth Parliament, Innovation to Industry sessions, cultural events, and a grand cyclothon. Grateful for the guidance of Smt. Shailaja Deval, IFS.",
       alt: "Students learning computer skills in new digital center",
     },
     {
@@ -22,10 +37,10 @@ export default function BlogSection() {
     },
     {
       image: "/attached_assets/blogs/3.jpg",
-      date: "26 feb 2025",
+      date: "26 Feb 2025",
       title: "Shiv Mahabhishek, Divine Bath & Rudraksh Distribution",
       description:
-        "Sh. Avinash Gehlot, Cabinet Minister of Social Justice & Empowerment (Rajasthan), led the sacred Shiv Mahabhishek ceremony and distributed rudraksh to devotees, creating a spiritual and memorable event.",
+        "Sh. Avinash Gehlot, Cabinet Minister of Social Justice & Empowerment (Rajasthan), led the sacred Shiv Mahabhishek ceremony and distributed rudraksh to devotees, creating a spiritual and memorable event.",
       alt: "Community tree plantation event with volunteers and local residents",
     },
   ];
@@ -37,13 +52,13 @@ export default function BlogSection() {
           <h2 className="font-['Poppins'] font-bold text-4xl text-[hsl(207,100%,20%)] mb-4">Latest News & Updates</h2>
           <p className="text-gray-600 text-lg">Stay updated with our latest initiatives and success stories</p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {blogPosts.map((post, index) => (
             <article key={index} className="bg-white rounded-xl overflow-hidden shadow-lg card-hover">
-              <img 
-                src={post.image} 
-                alt={post.alt} 
+              <img
+                src={post.image}
+                alt={post.alt}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
@@ -60,7 +75,7 @@ export default function BlogSection() {
             </article>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <Button className="btn-primary text-white px-8 py-3 rounded-full font-bold">
             View All News
