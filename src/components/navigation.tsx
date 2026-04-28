@@ -17,13 +17,18 @@ export default function Navigation() {
     <nav className="fixed w-full top-0 z-50 navbar-backdrop border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
+          {/* Logo - UPDATED WITH CIRCULAR STYLING */}
           <div className="flex items-center">
-            <img 
-              src="/attached_assets/ChatGPT Image Jul 13, 2025, 04_55_56 PM_1752405975923.png" 
-              alt="Navyaan Foundation Logo" 
-              className="w-12 h-12 mr-3"
-            />
+            {/* Circular container with gradient border */}
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#00796B] to-[#002D62] p-[2px] mr-3 shadow-sm">
+              <div className="w-full h-full rounded-full bg-white flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/attached_assets/ChatGPT Image Jul 13, 2025, 04_55_56 PM_1752405975923.png" 
+                  alt="Navyaan Foundation Logo" 
+                  className="w-11 h-11 object-contain"
+                />
+              </div>
+            </div>
             <div>
               <h1 className="font-bold text-[hsl(207,100%,20%)] text-lg font-['Poppins']">Navyaan Foundation</h1>
               <p className="text-xs text-gray-600">नव्यान फाउंडेशन</p>
