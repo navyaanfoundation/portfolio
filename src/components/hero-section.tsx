@@ -14,12 +14,15 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="mb-8">
-            {/* FIXED LOGO - Circular with solid white background and shadow */}
-            <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl border-4 border-white/30">
+            {/* SOLUTION 2: Logo with subtle glow effect - PNG ka circle dikhega */}
+            <div className="mx-auto mb-6 w-fit">
               <img
                 src="/attached_assets/ChatGPT Image Jul 13, 2025, 04_55_56 PM_1752405975923.png"
                 alt="Navyaan Foundation Logo"
-                className="w-24 h-24 object-contain"
+                className="w-40 h-40"
+                style={{
+                  filter: 'drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.2))'
+                }}
               />
             </div>
             <h1 className="font-['Poppins'] font-bold text-4xl md:text-6xl mb-4">
