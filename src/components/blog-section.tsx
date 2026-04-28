@@ -18,6 +18,7 @@ export default function BlogSection() {
       description:
         "Navyaan Foundation co-organised the Wealth & Wellness Conclave at V2 Paradise Resort, Jaipur — featuring expert health talks, financial literacy workshops, and wellness sessions. An inspiring day for students, parents, professionals and senior citizens.",
       alt: "Wealth and Wellness Conclave organised by Navyaan Foundation",
+      objectPosition: "bottom",
     },
     {
       image: "/attached_assets/blogs/1.jpg",
@@ -60,6 +61,7 @@ export default function BlogSection() {
                 src={post.image}
                 alt={post.alt}
                 className="w-full h-48 object-cover"
+                style={{ objectPosition: (post as any).objectPosition || 'center' }}
               />
               <div className="p-6">
                 <div className="flex items-center text-sm text-gray-500 mb-2">
