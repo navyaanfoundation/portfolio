@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // ══════════════════════════════════════════════════════════════
-//  Navyaan Foundation — All Events Page
+//  Navyaan Foundation — All Events Page (Mobile Optimized)
 //  Route: /events
 //  To add a new event: add an object to the EVENTS array below
 // ══════════════════════════════════════════════════════════════
@@ -251,7 +251,7 @@ function MediaCard({ item }: { item: MediaClip }) {
   );
 }
 
-// ── Event Card component ───────────────────────────────────
+// ── Event Card component (MOBILE OPTIMIZED) ────────────────
 function EventCard({ event }: { event: NavyaanEvent }) {
   const [tab, setTab]               = useState("photos");
   const [expanded, setExpanded]     = useState(event.id === 1);
@@ -276,34 +276,40 @@ function EventCard({ event }: { event: NavyaanEvent }) {
       border:`1px solid rgba(0,0,0,0.07)`,
       marginBottom:24,
     }}>
-      {/* Card header — always visible */}
+      {/* Card header — MOBILE OPTIMIZED */}
       <div
         onClick={() => setExpanded(!expanded)}
         style={{
           display:"flex", alignItems:"center",
-          gap:20, padding:"20px 24px",
+          gap:"clamp(12px, 3vw, 20px)",
+          padding:"clamp(14px, 4vw, 20px) clamp(16px, 5vw, 24px)",
           cursor:"pointer",
           background: expanded
             ? `linear-gradient(135deg, ${B.navy}, #003580)`
             : "#fff",
           transition:"background 0.3s ease",
+          flexWrap:"wrap",
         }}
       >
-        {/* Cover image thumbnail */}
+        {/* Cover image thumbnail — MOBILE OPTIMIZED */}
         {event.coverImg && (
           <img src={event.coverImg} alt={event.title}
             style={{
-              width:64, height:64, borderRadius:10,
+              width:"clamp(52px, 15vw, 64px)",
+              height:"clamp(52px, 15vw, 64px)",
+              borderRadius:10,
               objectFit:"cover", flexShrink:0,
               border: expanded ? "2px solid rgba(255,255,255,0.3)" : `2px solid ${event.tagColor}20`,
             }} />
         )}
         {!event.coverImg && (
           <div style={{
-            width:64, height:64, borderRadius:10,
+            width:"clamp(52px, 15vw, 64px)",
+            height:"clamp(52px, 15vw, 64px)",
+            borderRadius:10,
             background:`${event.tagColor}15`,
             display:"flex", alignItems:"center", justifyContent:"center",
-            fontSize:28, flexShrink:0,
+            fontSize:"clamp(22px, 6vw, 28px)", flexShrink:0,
           }}>
             {event.tag.includes("Women") ? "🌸" :
              event.tag.includes("Health") ? "💚" :
@@ -311,14 +317,15 @@ function EventCard({ event }: { event: NavyaanEvent }) {
           </div>
         )}
 
-        {/* Title block */}
-        <div style={{ flex:1, minWidth:0 }}>
+        {/* Title block — MOBILE OPTIMIZED */}
+        <div style={{ flex:1, minWidth:"200px" }}>
           <div style={{ display:"flex", alignItems:"center", gap:10, flexWrap:"wrap", marginBottom:4 }}>
             <span style={{
               background: expanded ? "rgba(255,255,255,0.2)" : `${event.tagColor}18`,
               color: expanded ? "#fff" : event.tagColor,
               padding:"2px 10px", borderRadius:20,
-              fontSize:10.5, fontWeight:700, letterSpacing:1,
+              fontSize:"clamp(9px, 2.5vw, 10.5px)",
+              fontWeight:700, letterSpacing:1,
             }}>
               {event.tag}
             </span>
@@ -327,39 +334,49 @@ function EventCard({ event }: { event: NavyaanEvent }) {
                 background: expanded ? "rgba(0,200,150,0.25)" : "#E8F5E9",
                 color: expanded ? "#69f0ae" : "#2E7D32",
                 padding:"2px 10px", borderRadius:20,
-                fontSize:10, fontWeight:700,
+                fontSize:"clamp(8px, 2vw, 10px)",
+                fontWeight:700,
               }}>✓ Completed</span>
             )}
           </div>
           <h3 style={{
-            fontSize:"clamp(15px,2.5vw,18px)",
+            fontSize:"clamp(14px, 4vw, 18px)",
             fontWeight:800,
             color: expanded ? "#fff" : B.navy,
             margin:"0 0 3px",
             transition:"color 0.3s",
+            lineHeight:1.3,
           }}>{event.title}</h3>
           <p style={{
-            fontSize:12, margin:0,
+            fontSize:"clamp(10px, 2.8vw, 12px)",
+            margin:0,
             color: expanded ? "rgba(255,255,255,0.6)" : "#888",
+            lineHeight:1.5,
           }}>
-            📅 {event.displayDate} &nbsp;|&nbsp; 📍 {event.venue}
+            📅 {event.displayDate}<br className="inline sm:hidden" />
+            <span className="hidden sm:inline"> &nbsp;|&nbsp; </span>
+            📍 {event.venue}
           </p>
         </div>
 
-        {/* Stats — desktop */}
+        {/* Stats — HIDE ON VERY SMALL MOBILE */}
         <div style={{
           display:"flex", gap:12,
           flexShrink:0,
-        }}>
+        }}
+          className="hidden sm:flex"
+        >
           {event.stats.slice(0, 2).map(s => (
             <div key={s.label} style={{ textAlign:"center" }}>
               <div style={{
-                fontSize:18, fontWeight:800,
+                fontSize:"clamp(16px, 4vw, 18px)",
+                fontWeight:800,
                 color: expanded ? B.gold : event.tagColor,
                 lineHeight:1,
               }}>{s.num}</div>
               <div style={{
-                fontSize:9.5, fontWeight:600,
+                fontSize:"clamp(8px, 2vw, 9.5px)",
+                fontWeight:600,
                 color: expanded ? "rgba(255,255,255,0.5)" : "#999",
               }}>{s.label}</div>
             </div>
@@ -378,30 +395,45 @@ function EventCard({ event }: { event: NavyaanEvent }) {
         }}>▼</div>
       </div>
 
-      {/* Expanded content */}
+      {/* Expanded content — MOBILE OPTIMIZED */}
       {expanded && (
-        <div style={{ padding:"24px" }}>
+        <div style={{ padding:"clamp(16px, 5vw, 24px)" }}>
 
           {/* Description */}
           <p style={{
-            fontSize:13.5, color:"#444",
+            fontSize:"clamp(12px, 3.5vw, 13.5px)",
+            color:"#444",
             lineHeight:1.85, marginBottom:20,
             borderLeft:`3px solid ${event.tagColor}`,
             paddingLeft:14,
           }}>{event.description}</p>
 
-          {/* All stats */}
+          {/* All stats — MOBILE GRID */}
           {event.stats.length > 0 && (
-            <div style={{ display:"flex", flexWrap:"wrap", gap:12, marginBottom:24 }}>
+            <div style={{
+              display:"grid",
+              gridTemplateColumns:"repeat(auto-fit, minmax(70px, 1fr))",
+              gap:12,
+              marginBottom:24
+            }}>
               {event.stats.map(s => (
                 <div key={s.label} style={{
                   background: B.ivory,
                   border:`2px solid ${B.gold}`,
-                  borderRadius:10, padding:"10px 18px",
-                  textAlign:"center", minWidth:80,
+                  borderRadius:10,
+                  padding:"clamp(8px, 2.5vw, 10px) clamp(12px, 4vw, 18px)",
+                  textAlign:"center",
                 }}>
-                  <div style={{ fontSize:22, fontWeight:800, color: event.tagColor }}>{s.num}</div>
-                  <div style={{ fontSize:10.5, color:"#666", fontWeight:600 }}>{s.label}</div>
+                  <div style={{
+                    fontSize:"clamp(18px, 5vw, 22px)",
+                    fontWeight:800,
+                    color: event.tagColor
+                  }}>{s.num}</div>
+                  <div style={{
+                    fontSize:"clamp(9px, 2.5vw, 10.5px)",
+                    color:"#666",
+                    fontWeight:600
+                  }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -412,35 +444,49 @@ function EventCard({ event }: { event: NavyaanEvent }) {
             <div style={{
               background:`${event.tagColor}08`,
               border:`1.5px dashed ${event.tagColor}40`,
-              borderRadius:12, padding:"24px",
+              borderRadius:12, padding:"clamp(18px, 5vw, 24px)",
               textAlign:"center",
             }}>
-              <div style={{ fontSize:32, marginBottom:8 }}>📸</div>
-              <p style={{ fontSize:13.5, color:"#666", margin:0, fontWeight:600 }}>
+              <div style={{ fontSize:"clamp(26px, 8vw, 32px)", marginBottom:8 }}>📸</div>
+              <p style={{ fontSize:"clamp(12px, 3.5vw, 13.5px)", color:"#666", margin:0, fontWeight:600 }}>
                 Photos & media coverage will be added soon!
               </p>
-              <p style={{ fontSize:12, color:"#aaa", margin:"6px 0 0" }}>
+              <p style={{ fontSize:"clamp(10px, 3vw, 12px)", color:"#aaa", margin:"6px 0 0" }}>
                 Stay tuned for updates on this event.
               </p>
             </div>
           )}
 
-          {/* Tabs — only show if there's content */}
+          {/* Tabs — MOBILE SCROLLABLE */}
           {event.status === "completed" && (event.photos.length > 0 || event.media.length > 0 || event.videos.length > 0) && (
             <>
-              {/* Tab buttons */}
-              <div style={{ display:"flex", gap:8, marginBottom:24, flexWrap:"wrap" }}>
+              {/* Tab buttons — MOBILE SCROLL */}
+              <div style={{
+                display:"flex",
+                gap:8,
+                marginBottom:24,
+                overflowX:"auto",
+                WebkitOverflowScrolling:"touch",
+                scrollbarWidth:"none",
+                msOverflowStyle:"none",
+              }} className="hide-scrollbar">
                 {tabs.filter(t => t.count > 0).map(t => (
                   <button key={t.key}
                     onClick={() => setTab(t.key)}
                     style={{
-                      padding:"8px 18px", borderRadius:24, cursor:"pointer",
-                      fontSize:13, fontWeight:700, border:"2px solid",
+                      padding:"8px 18px",
+                      borderRadius:24,
+                      cursor:"pointer",
+                      fontSize:"clamp(11px, 3vw, 13px)",
+                      fontWeight:700,
+                      border:"2px solid",
                       transition:"all 0.2s",
                       background:  tab===t.key ? event.tagColor : "#fff",
                       color:       tab===t.key ? "#fff" : event.tagColor,
                       borderColor: tab===t.key ? event.tagColor : `${event.tagColor}40`,
                       boxShadow:   tab===t.key ? `0 4px 12px ${event.tagColor}30` : "none",
+                      whiteSpace:"nowrap",
+                      flexShrink:0,
                     }}
                   >
                     {t.label}
@@ -449,18 +495,19 @@ function EventCard({ event }: { event: NavyaanEvent }) {
                       background: tab===t.key ? "rgba(255,255,255,0.25)" : `${event.tagColor}15`,
                       color: tab===t.key ? "#fff" : event.tagColor,
                       borderRadius:10, padding:"1px 7px",
-                      fontSize:10.5, fontWeight:800,
+                      fontSize:"clamp(9px, 2.5vw, 10.5px)",
+                      fontWeight:800,
                     }}>{t.count}</span>
                   </button>
                 ))}
               </div>
 
-              {/* Photos tab */}
+              {/* Photos tab — MOBILE GRID */}
               {tab === "photos" && event.photos.length > 0 && (
                 <>
                   <div style={{
                     display:"grid",
-                    gridTemplateColumns:"repeat(auto-fill, minmax(200px, 1fr))",
+                    gridTemplateColumns:"repeat(auto-fill, minmax(clamp(140px, 45vw, 200px), 1fr))",
                     gap:12,
                   }}>
                     {visiblePhotos.map((p, i) => (
@@ -472,7 +519,9 @@ function EventCard({ event }: { event: NavyaanEvent }) {
                       <button onClick={() => setShowAllPhotos(true)} style={{
                         background:`linear-gradient(135deg, ${event.tagColor}, ${event.tagColor}cc)`,
                         color:"#fff", border:"none", borderRadius:24,
-                        padding:"10px 26px", fontSize:13, fontWeight:700, cursor:"pointer",
+                        padding:"10px 26px",
+                        fontSize:"clamp(11px, 3vw, 13px)",
+                        fontWeight:700, cursor:"pointer",
                       }}>
                         View More Photos ({event.photos.length - 8} more) ↓
                       </button>
@@ -481,19 +530,20 @@ function EventCard({ event }: { event: NavyaanEvent }) {
                         background:"#fff", color: event.tagColor,
                         border:`2px solid ${event.tagColor}`,
                         borderRadius:24, padding:"8px 22px",
-                        fontSize:13, fontWeight:700, cursor:"pointer",
+                        fontSize:"clamp(11px, 3vw, 13px)",
+                        fontWeight:700, cursor:"pointer",
                       }}>Show Less ↑</button>
                     ) : null}
                   </div>
                 </>
               )}
 
-              {/* Media tab */}
+              {/* Media tab — MOBILE GRID */}
               {tab === "media" && event.media.length > 0 && (
                 <>
                   <div style={{
                     display:"grid",
-                    gridTemplateColumns:"repeat(auto-fill, minmax(220px, 1fr))",
+                    gridTemplateColumns:"repeat(auto-fill, minmax(clamp(160px, 48vw, 220px), 1fr))",
                     gap:12,
                   }}>
                     {visibleMedia.map((m, i) => <MediaCard key={i} item={m} />)}
@@ -503,7 +553,9 @@ function EventCard({ event }: { event: NavyaanEvent }) {
                       <button onClick={() => setShowAllMedia(true)} style={{
                         background:`linear-gradient(135deg, ${event.tagColor}, ${event.tagColor}cc)`,
                         color:"#fff", border:"none", borderRadius:24,
-                        padding:"10px 26px", fontSize:13, fontWeight:700, cursor:"pointer",
+                        padding:"10px 26px",
+                        fontSize:"clamp(11px, 3vw, 13px)",
+                        fontWeight:700, cursor:"pointer",
                       }}>
                         View All {event.media.length} Clips ↓
                       </button>
@@ -512,7 +564,8 @@ function EventCard({ event }: { event: NavyaanEvent }) {
                         background:"#fff", color: event.tagColor,
                         border:`2px solid ${event.tagColor}`,
                         borderRadius:24, padding:"8px 22px",
-                        fontSize:13, fontWeight:700, cursor:"pointer",
+                        fontSize:"clamp(11px, 3vw, 13px)",
+                        fontWeight:700, cursor:"pointer",
                       }}>Show Less ↑</button>
                     ) : null}
                   </div>
@@ -521,13 +574,15 @@ function EventCard({ event }: { event: NavyaanEvent }) {
 
               {/* Videos tab */}
               {tab === "videos" && event.videos.length > 0 && (
-                <div style={{ display:"flex", flexDirection:"column" as const, gap:10, maxWidth:700 }}>
+                <div style={{ display:"flex", flexDirection:"column" as const, gap:10 }}>
                   {event.videos.map((v, i) => (
                     <a key={i} href={v.url} target="_blank" rel="noopener noreferrer"
                       style={{
-                        display:"flex", alignItems:"center", gap:14,
+                        display:"flex", alignItems:"center",
+                        gap:"clamp(10px, 3vw, 14px)",
                         background: B.ivory, borderRadius:10,
-                        padding:"14px 18px", textDecoration:"none",
+                        padding:"clamp(12px, 3.5vw, 14px) clamp(14px, 4vw, 18px)",
+                        textDecoration:"none",
                         border:"1px solid #eee",
                         transition:"transform 0.2s, box-shadow 0.2s",
                       }}
@@ -535,19 +590,35 @@ function EventCard({ event }: { event: NavyaanEvent }) {
                       onMouseLeave={e=>{e.currentTarget.style.transform="translateX(0)";  e.currentTarget.style.boxShadow="none";}}
                     >
                       <div style={{
-                        width:42, height:42, borderRadius:"50%",
+                        width:"clamp(36px, 10vw, 42px)",
+                        height:"clamp(36px, 10vw, 42px)",
+                        borderRadius:"50%",
                         background:v.color,
                         display:"flex", alignItems:"center", justifyContent:"center",
-                        color:"#fff", fontSize:14, flexShrink:0, fontWeight:800,
+                        color:"#fff",
+                        fontSize:"clamp(11px, 3vw, 14px)",
+                        flexShrink:0, fontWeight:800,
                       }}>▶</div>
-                      <div style={{ flex:1 }}>
-                        <p style={{ fontSize:13, fontWeight:700, color:B.navy, margin:"0 0 2px" }}>{v.title}</p>
-                        <p style={{ fontSize:11, color:"#888", margin:0 }}>{v.platform}</p>
+                      <div style={{ flex:1, minWidth:0 }}>
+                        <p style={{
+                          fontSize:"clamp(11px, 3.2vw, 13px)",
+                          fontWeight:700, color:B.navy,
+                          margin:"0 0 2px",
+                          overflow:"hidden",
+                          textOverflow:"ellipsis",
+                          whiteSpace:"nowrap",
+                        }}>{v.title}</p>
+                        <p style={{
+                          fontSize:"clamp(9px, 2.5vw, 11px)",
+                          color:"#888", margin:0
+                        }}>{v.platform}</p>
                       </div>
                       <div style={{
                         background:`${v.color}15`, color:v.color,
-                        borderRadius:8, padding:"5px 12px",
-                        fontSize:11.5, fontWeight:700, flexShrink:0,
+                        borderRadius:8,
+                        padding:"5px 12px",
+                        fontSize:"clamp(10px, 2.8vw, 11.5px)",
+                        fontWeight:700, flexShrink:0,
                       }}>Watch →</div>
                     </a>
                   ))}
@@ -562,96 +633,133 @@ function EventCard({ event }: { event: NavyaanEvent }) {
 }
 
 // ══════════════════════════════════════════════════════════════
-//  MAIN PAGE
+//  MAIN PAGE — MOBILE OPTIMIZED
 // ══════════════════════════════════════════════════════════════
 export default function Events() {
   return (
-    <div style={{ background: B.ivory, minHeight:"100vh" }}>
+    <>
+      <style>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
+      
+      <div style={{ background: B.ivory, minHeight:"100vh", paddingTop:"64px" }}>
 
-      {/* Page Header */}
-      <div style={{
-        background:`linear-gradient(135deg, ${B.navy} 0%, #003580 100%)`,
-        padding:"64px 20px 48px",
-        textAlign:"center",
-        position:"relative",
-        overflow:"hidden",
-      }}>
-        {/* Decorative */}
-        <div style={{position:"absolute",top:-60,right:-60,width:280,height:280,borderRadius:"50%",background:"rgba(201,160,50,0.07)",pointerEvents:"none"}}/>
-        <div style={{position:"absolute",bottom:-40,left:-40,width:200,height:200,borderRadius:"50%",background:"rgba(0,121,107,0.10)",pointerEvents:"none"}}/>
-
-        <span style={{
-          display:"inline-block",
-          background:"rgba(201,160,50,0.15)",
-          border:"1px solid rgba(201,160,50,0.4)",
-          color: B.gold,
-          padding:"5px 18px", borderRadius:20,
-          fontSize:11, fontWeight:700, letterSpacing:3,
-          textTransform:"uppercase", marginBottom:14,
-        }}>Navyaan Foundation</span>
-
-        <h1 style={{
-          fontSize:"clamp(28px,5vw,48px)",
-          fontWeight:900, color:"#fff",
-          margin:"0 0 12px", letterSpacing:1,
-        }}>Our Events</h1>
-
-        <p style={{
-          fontSize:15, color:"rgba(255,255,255,0.65)",
-          maxWidth:520, margin:"0 auto 0",
-          lineHeight:1.7,
-        }}>
-          Every event is a step towards empowerment, health and community impact.
-          Explore all that Navyaan Foundation has organised.
-        </p>
-
-        {/* Total count */}
+        {/* Page Header — MOBILE OPTIMIZED */}
         <div style={{
-          display:"inline-flex", gap:24,
-          background:"rgba(255,255,255,0.08)",
-          border:"1px solid rgba(255,255,255,0.15)",
-          borderRadius:14, padding:"12px 28px", marginTop:24,
+          background:`linear-gradient(135deg, ${B.navy} 0%, #003580 100%)`,
+          padding:"clamp(40px, 10vw, 64px) clamp(16px, 5vw, 20px) clamp(32px, 8vw, 48px)",
+          textAlign:"center",
+          position:"relative",
+          overflow:"hidden",
         }}>
-          <div style={{ textAlign:"center" }}>
-            <div style={{ fontSize:24, fontWeight:900, color:B.gold }}>{EVENTS.length}</div>
-            <div style={{ fontSize:10.5, color:"rgba(255,255,255,0.5)", fontWeight:600 }}>Events Organised</div>
-          </div>
-          <div style={{ width:1, background:"rgba(255,255,255,0.15)" }}/>
-          <div style={{ textAlign:"center" }}>
-            <div style={{ fontSize:24, fontWeight:900, color:B.gold }}>2025–26</div>
-            <div style={{ fontSize:10.5, color:"rgba(255,255,255,0.5)", fontWeight:600 }}>Year</div>
-          </div>
-        </div>
-      </div>
+          {/* Decorative */}
+          <div style={{position:"absolute",top:-60,right:-60,width:280,height:280,borderRadius:"50%",background:"rgba(201,160,50,0.07)",pointerEvents:"none"}}/>
+          <div style={{position:"absolute",bottom:-40,left:-40,width:200,height:200,borderRadius:"50%",background:"rgba(0,121,107,0.10)",pointerEvents:"none"}}/>
 
-      {/* Events List */}
-      <div style={{ maxWidth:1000, margin:"0 auto", padding:"40px 20px 60px" }}>
+          <span style={{
+            display:"inline-block",
+            background:"rgba(201,160,50,0.15)",
+            border:"1px solid rgba(201,160,50,0.4)",
+            color: B.gold,
+            padding:"5px 18px", borderRadius:20,
+            fontSize:"clamp(9px, 2.5vw, 11px)",
+            fontWeight:700, letterSpacing:3,
+            textTransform:"uppercase", marginBottom:14,
+          }}>Navyaan Foundation</span>
 
-        <p style={{
-          fontSize:12, color:"#aaa", textAlign:"right",
-          marginBottom:20, fontWeight:600,
-        }}>
-          Showing {EVENTS.length} events · Most recent first
-        </p>
+          <h1 style={{
+            fontSize:"clamp(24px, 7vw, 48px)",
+            fontWeight:900, color:"#fff",
+            margin:"0 0 12px", letterSpacing:1,
+          }}>Our Events</h1>
 
-        {EVENTS.map(event => (
-          <EventCard key={event.id} event={event} />
-        ))}
-
-        {/* Future events note */}
-        <div style={{
-          textAlign:"center", marginTop:16,
-          padding:"20px",
-          background:"rgba(0,45,98,0.04)",
-          border:"1.5px dashed rgba(0,45,98,0.15)",
-          borderRadius:12,
-        }}>
-          <p style={{ fontSize:13, color:"#999", margin:0 }}>
-            🎯 More events coming soon — stay connected with Navyaan Foundation!
+          <p style={{
+            fontSize:"clamp(13px, 3.5vw, 15px)",
+            color:"rgba(255,255,255,0.65)",
+            maxWidth:520, margin:"0 auto 0",
+            lineHeight:1.7,
+            padding:"0 10px",
+          }}>
+            Every event is a step towards empowerment, health and community impact.
+            Explore all that Navyaan Foundation has organised.
           </p>
+
+          {/* Total count — MOBILE OPTIMIZED */}
+          <div style={{
+            display:"inline-flex",
+            gap:"clamp(16px, 5vw, 24px)",
+            background:"rgba(255,255,255,0.08)",
+            border:"1px solid rgba(255,255,255,0.15)",
+            borderRadius:14,
+            padding:"clamp(10px, 3vw, 12px) clamp(20px, 6vw, 28px)",
+            marginTop:24,
+          }}>
+            <div style={{ textAlign:"center" }}>
+              <div style={{
+                fontSize:"clamp(20px, 6vw, 24px)",
+                fontWeight:900, color:B.gold
+              }}>{EVENTS.length}</div>
+              <div style={{
+                fontSize:"clamp(8px, 2.2vw, 10.5px)",
+                color:"rgba(255,255,255,0.5)", fontWeight:600
+              }}>Events Organised</div>
+            </div>
+            <div style={{ width:1, background:"rgba(255,255,255,0.15)" }}/>
+            <div style={{ textAlign:"center" }}>
+              <div style={{
+                fontSize:"clamp(20px, 6vw, 24px)",
+                fontWeight:900, color:B.gold
+              }}>2025–26</div>
+              <div style={{
+                fontSize:"clamp(8px, 2.2vw, 10.5px)",
+                color:"rgba(255,255,255,0.5)", fontWeight:600
+              }}>Year</div>
+            </div>
+          </div>
         </div>
 
+        {/* Events List — MOBILE PADDING */}
+        <div style={{
+          maxWidth:1000, margin:"0 auto",
+          padding:"clamp(24px, 6vw, 40px) clamp(12px, 4vw, 20px) clamp(40px, 10vw, 60px)"
+        }}>
+
+          <p style={{
+            fontSize:"clamp(10px, 2.8vw, 12px)",
+            color:"#aaa", textAlign:"right",
+            marginBottom:20, fontWeight:600,
+          }}>
+            Showing {EVENTS.length} events · Most recent first
+          </p>
+
+          {EVENTS.map(event => (
+            <EventCard key={event.id} event={event} />
+          ))}
+
+          {/* Future events note */}
+          <div style={{
+            textAlign:"center", marginTop:16,
+            padding:"clamp(16px, 4vw, 20px)",
+            background:"rgba(0,45,98,0.04)",
+            border:"1.5px dashed rgba(0,45,98,0.15)",
+            borderRadius:12,
+          }}>
+            <p style={{
+              fontSize:"clamp(11px, 3vw, 13px)",
+              color:"#999", margin:0
+            }}>
+              🎯 More events coming soon — stay connected with Navyaan Foundation!
+            </p>
+          </div>
+
+        </div>
       </div>
-    </div>
+    </>
   );
 }
