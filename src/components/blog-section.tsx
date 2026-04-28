@@ -12,7 +12,7 @@ export default function BlogSection() {
       alt: "AURA The Power of She event by Navyaan Foundation",
     },
     {
-      image: "https://i.ibb.co/ccpWp5DS/Whats-App-Image-2026-04-26-at-13-27-44.jpg",
+      image: "https://i.ibb.co/BVcCgMTJ/Whats-App-Image-2026-04-26-at-13-27-44-2.jpg",
       date: "5th October 2025",
       title: "Wealth & Wellness Conclave: Balance Your Body, Grow Your Bank",
       description:
