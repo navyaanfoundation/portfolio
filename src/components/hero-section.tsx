@@ -14,11 +14,12 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="mb-8">
-            <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            {/* FIXED LOGO - Circular with solid white background and shadow */}
+            <div className="w-32 h-32 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl border-4 border-white/30">
               <img
                 src="/attached_assets/ChatGPT Image Jul 13, 2025, 04_55_56 PM_1752405975923.png"
                 alt="Navyaan Foundation Logo"
-                className="w-full h-full object-contain"
+                className="w-24 h-24 object-contain"
               />
             </div>
             <h1 className="font-['Poppins'] font-bold text-4xl md:text-6xl mb-4">
